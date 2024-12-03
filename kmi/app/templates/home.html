@@ -1,0 +1,15 @@
+<!-- app/templates/home.html -->
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <h1>Bienvenido a gestion inteligente kmi</h1>
+    <!-- Contenedor del gráfico -->
+    <div id="main" style="width: 600px; height: 400px;"></div>
+    <!-- Botón de inicio -->
+    <button class="start-button" onclick="startApp()">Iniciar</button>
+{% endblock %}
+
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}

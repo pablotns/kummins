@@ -1,0 +1,31 @@
+/* Estilo del contenedor y del botón */
+
+#main {
+    width: 600px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+#chartPie {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+#chartScatter {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    }  
+.start-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.start-button:hover {
+    background-color: #45a049;
+}
