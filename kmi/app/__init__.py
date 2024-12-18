@@ -7,6 +7,7 @@ from .models import User
 from .main import main as main_blueprint
 from .menu import menu as menu_blueprint
 from .dash import dash as dash_blueprint
+from .settings import settings as settings_blueprint
 
 
 def create_app():
@@ -29,6 +30,7 @@ def create_app():
     app.register_blueprint(profile_blueprint, url_prefix='/profile')
     app.register_blueprint(menu_blueprint, url_prefix='/menu')
     app.register_blueprint(dash_blueprint, url_prefix='/dash')
+    app.register_blueprint(settings_blueprint, url_prefix='/settings')
     app.register_blueprint(main_blueprint)
 
     return app

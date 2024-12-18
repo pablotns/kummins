@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Computadoras</title>
+    <!-- importacion de css -->
+    <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Computadoras</h1>
+        <ul id="computerList"></ul>
+        <button id="submitBtn">Enviar Respuestas</button>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/matriz.js') }}"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 
 // Inicializar ECharts
 var ROOT_PATH = 'https://echarts.apache.org/examples';
-var chartDom = document.getElementById('main');
+var chartDom = document.getElementById('neurachart');
 var myChart = echarts.init(chartDom);
 var option;
 

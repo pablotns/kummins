@@ -14,7 +14,7 @@ def login():
         if user:
             user_obj = User(user["id"], user["username"])
             login_user(user_obj)
-            return redirect(url_for('profile.view_profile'))
+            return redirect(url_for('menu.menu'))
         else:
             flash('Usuario o contraseña incorrectos')
     

@@ -4,6 +4,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
 
+
 class DataProcessor:
     def __init__(self):
 
@@ -117,13 +118,5 @@ processor = DataProcessor()
 
 # Ejemplo de uso
 if __name__ == "__main__":
-    processor = DataProcessor()
-    processor.process_data()
-    processor.process_kmeans()
-    processor.process_results()
-
-    v1, v2, v3 = processor.get_cantPuntos()
-
-    print(v1)
-    print(v2)
-    print(v3)
+    
+    DataProcessor.get_cantPuntos()

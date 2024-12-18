@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz de Confusión</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f0f8ff; color: #333; }
+        .container { width: 80%; margin: auto; padding: 20px; text-align: center; }
+        table { margin: auto; border-collapse: collapse; width: 60%; }
+        table, th, td { border: 1px solid #3498db; }
+        th, td { padding: 10px; text-align: center; }
+        th { background-color: #3498db; color: white; }
+        h1, h2 { color: #2980b9; }
+        .accuracy { margin-top: 20px; font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Matriz de Confusión</h1>
+        <table>
+            <tr>
+                <th></th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+            {% for row in confusion_matrix %}
+            <tr>
+                <th>{{ loop.index0 }}</th>
+                {% for cell in row %}
+                <td>{{ cell }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h2>Reporte de Clasificación</h2>
+        <table>
+            <tr>
+                <th>Clase</th>
+                <th>Precisión</th>
+                <th>Recall</th>
+                <th>F1-Score</th>
+                <th>Soporte</th>
+            </tr>
+            {% for label, metrics in classification_report.items() %}
+            {% if label not in ['accuracy', 'macro avg', 'weighted avg'] %}
+            <tr>
+                <td>{{ label }}</td>
+                <td>{{ metrics['precision']|round(2) }}</td>
+                <td>{{ metrics['recall']|round(2) }}</td>
+                <td>{{ metrics['f1-score']|round(2) }}</td>
+                <td>{{ metrics['support'] }}</td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </table>
+
+        <div class="accuracy">
+            <strong>Precisión Global:</strong> {{ accuracy|round(2) }}
+        </div>
+    </div>
+</body>
+</html>

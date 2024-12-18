@@ -22,9 +22,9 @@ const initChart2 = async() => {
   myChart.setOption(await getOptionChart2());
   myChart.on('click', function(params) {
     var categoryMap = {
-      'CLUSTER1': 'categoria1',
-      'CLUSTER2': 'categoria2',
-      'CLUSTER3': 'categoria3'
+      'CLUSTER1': 'cluster01',
+      'CLUSTER2': 'cluster02',
+      'CLUSTER3': 'cluster03'
     };
   
     var categoryPage = categoryMap[params.name];

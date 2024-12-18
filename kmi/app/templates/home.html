@@ -2,11 +2,20 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
-    <h1>Bienvenido a gestion inteligente kmi</h1>
-    <!-- Contenedor del gráfico -->
-    <div id="main" style="width: 600px; height: 400px;"></div>
-    <!-- Botón de inicio -->
-    <button class="start-button" onclick="startApp()">Iniciar</button>
+    
+    <div class="grid-containerhome">
+        <!-- Sección Izquierda: Logo -->
+        <div class="left-section">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="logo">
+        </div>
+
+        <!-- Sección Derecha: Gráfico y Botón -->
+        <div class="right-section">
+            <div id="neurachart"></div>
+            <button class="start-button" onclick="startApp()">Iniciar</button>
+        </div>
+    </div>
+    
 {% endblock %}
 
 

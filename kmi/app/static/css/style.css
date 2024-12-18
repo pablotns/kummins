@@ -1,31 +1,257 @@
 /* Estilo del contenedor y del botón */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b9c7c6; /* Celeste claro */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
 
-#main {
-    width: 600px;
-    height: 400px;
+
+/* Estilo para títulos (h1, h2, h3) */
+h1 {
+    font-family: 'Poppins', sans-serif; /* Fuente sugerida para títulos */
+    font-size: 2.5em; /* Tamaño de fuente grande */
+    color: #004080; /* Azul oscuro */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    color: #00509e; /* Azul más claro */
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.75em;
+    color: #0066cc; /* Azul intermedio */
+    margin-bottom: 6px;
+}
+
+.titulo-centrado {
+    text-align: center;         /* Centra el texto */
+    margin: 20px 0;             /* Ajusta según necesites */
+}
+
+/* Estilo para enlaces */
+a {
+    font-family: 'Roboto', sans-serif;
+    color: #008cba; /* Azul claro */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#neurachart {
+    width: 80%;
+    height: 300px; /* Ajusta según tus necesidades */
+    background-color: #ccf7d8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     margin-bottom: 20px;
 }
+
+
 #chartPie {
     position: relative;
     height: 100vh;
     overflow: hidden;
-  }
+}
 
 #chartScatter {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    }  
-.start-button {
-    padding: 10px 20px;
-    font-size: 16px;
+}  
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #b9c7c6;;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+}
+
+.computer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #cce7ff;
+}
+
+.computer-item:last-child {
+    border-bottom: none;
+}
+
+.computer-details {
+    max-width: 60%;
+}
+
+.computer-name {
+    font-weight: bold;
+    color: #00bcd4; /* Cian */
+}
+
+.computer-specs {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.rating {
+    display: flex;
+    gap: 10px;
+}
+
+.rating label {
     cursor: pointer;
-    background-color: #4CAF50;
+    font-size: 1em;
+    color: #0056b3;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Estilo para botones */
+
+button {
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+    background-color: #008cba; /* Azul brillante */
     color: white;
+    padding: 10px 20px;
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f73; /* Azul más oscuro */
+}
+
+/* Estilo para menu */
+
+.menu {
+    display: grid; /* Activa el modelo de Grid */
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas iguales */
+    grid-gap: 20px; /* Espacio entre las opciones */
+    text-align: center;
+    max-width: 600px; /* Ancho máximo del menú */
+    margin: 20vh auto; /* Centra el contenedor vertical y horizontalmente */
+}
+
+.menu a {
+    display: flex;
+    flex-direction: column; /* Coloca el icono encima del texto */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #008cba; /* Fondo del botón */
+    color: white; /* Color del texto */
+    text-decoration: none;
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.menu a i {
+    font-size: 2em; /* Tamaño del icono */
+    margin-bottom: 10px;
+}
+
+.menu a:hover {
+    background-color: #005f73; /* Color de fondo al pasar el mouse */
+}
+
+/* Contenedor principal en Grid */
+.grid-containerhome {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    height: 100vh; /* Ocupa el 100% del alto de la pantalla */
+    margin: 0;
+}
+
+/* Sección Izquierda: Logo */
+.left-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b9c7c6;
+}
+
+/* Estilo para el logo */
+.logo {
+    max-width: 80%; /* Se ajusta al tamaño del contenedor */
+    height: auto;
+}
+
+/* Sección Derecha: Gráfico y Botón */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #b9c7c6;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Estilos del contenedor principal */
+.grid-container-login {
+    display: grid;                     /* Activa Grid Layout */
+    height: 100vh;                     /* Ocupa toda la altura de la ventana */
+    place-items: center;               /* Centra vertical y horizontalmente */
+    background-color: #f0f8ff;         /* Color de fondo suave (opcional) */
+}
+
+/* Caja del formulario de login */
+.login-box {
+    background-color: #ffffff;         /* Fondo blanco */
+    padding: 30px;
+    border-radius: 10px;               /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    text-align: center;
+    width: 300px;                      /* Ancho del formulario */
+}
+
+/* Estilos de los elementos del formulario */
+.login-box h2 {
+    margin-bottom: 20px;               /* Espacio debajo del título */
+    color: #004080;                    /* Color azul oscuro */
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;                       /* Ancho completo */
+    padding: 10px;
+    margin: 10px 0;                    /* Espacio vertical entre campos */
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.start-button:hover {
-    background-color: #45a049;
+.login-box button {
+    width: 100%;                       /* Ancho completo */
+    padding: 10px;
+    background-color: #008cba;         /* Color azul brillante */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #005f73;         /* Color más oscuro al pasar el mouse */
 }

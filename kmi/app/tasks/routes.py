@@ -92,12 +92,18 @@ def datos():
 
     dataset = globals.processor.get_tablaDesc()
     dataset = dataset.values.tolist()
-   
+    
+    w1,w2,w3 = globals.processor.get_dataTabla()
+    w1 = w1[:5]
+    w2 = w2[:5]
+    w3 = w3[:5]
+    settings = w1+w2+w3
     # Preparar la respuesta JSON
     response = {
         'pie': chart,
         'scatter': chart2,
-        'tabla' : dataset
+        'tabla' : dataset,
+        'settings' : settings
     }
     
     return jsonify(response)
