@@ -94,16 +94,19 @@ def datos():
     dataset = dataset.values.tolist()
     
     w1,w2,w3 = globals.processor.get_dataTabla()
-    w1 = w1[:5]
-    w2 = w2[:5]
-    w3 = w3[:5]
-    settings = w1+w2+w3
+    s1 = w1[:5]
+    s2 = w2[:5]
+    s3 = w3[:5]
+    settings = s1+s2+s3
     # Preparar la respuesta JSON
     response = {
         'pie': chart,
         'scatter': chart2,
         'tabla' : dataset,
-        'settings' : settings
+        'settings' : settings,
+        'cluster1' : w1,
+        'cluster2' : w2,
+        'cluster3' : w3
     }
     
     return jsonify(response)

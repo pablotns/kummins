@@ -1,24 +1,49 @@
 <!-- app/templates/home.html -->
-{% extends "base.html" %}
-{% block title %}Home{% endblock %}
-{% block content %}
-    
-    <div class="grid-containerhome">
-        <!-- Sección Izquierda: Logo -->
-        <div class="left-section">
-            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="logo">
-        </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clustering de Datos</title>
+    <!-- CSS de Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Sección Derecha: Gráfico y Botón -->
-        <div class="right-section">
-            <div id="neurachart"></div>
+    <!-- importacion de css -->
+    <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" type="text/css">
+    <style>
+    
+        body {
+            margin: 0;
+            background: url("{{ url_for('static', filename='img/background.jpg') }}") no-repeat center top;
+            background-size: cover;
+            height: 100vh;
+        }
+        header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .logo {
+            width: 100px;
+        }
+    
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de la marca" class="logo">
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Clustering de Datos no etiquetados</h1>
+            <h3>Kummins es una herramienta para la clasificación de computadoras en base a sus componentes hardware</h3>
             <button class="start-button" onclick="startApp()">Iniciar</button>
-        </div>
-    </div>
-    
-{% endblock %}
-
-
-{% block scripts %}
+        </section>
+       
+    </main>
     <script src="{{ url_for('static', filename='js/home.js') }}"></script>
-{% endblock %}
+</body>    
+</html>

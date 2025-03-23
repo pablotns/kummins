@@ -7,12 +7,11 @@ body {
     padding: 20px;
 }
 
-
 /* Estilo para títulos (h1, h2, h3) */
 h1 {
     font-family: 'Poppins', sans-serif; /* Fuente sugerida para títulos */
     font-size: 2.5em; /* Tamaño de fuente grande */
-    color: #004080; /* Azul oscuro */
+    color: #008cba; /* Azul oscuro */
     margin-bottom: 10px;
 }
 
@@ -26,7 +25,7 @@ h2 {
 h3 {
     font-family: 'Poppins', sans-serif;
     font-size: 1.75em;
-    color: #0066cc; /* Azul intermedio */
+    color: #ffffff; /* Azul intermedio */
     margin-bottom: 6px;
 }
 
@@ -73,6 +72,34 @@ ul {
     overflow: hidden;
 }  
 
+/* resultado de la matriz de confusion*/
+#result {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #007bff, #00d4ff); /* Degradado atractivo */
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    border: 2px solid white; /* Borde sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para más interacción */
+#result:hover {
+    transform: scale(1.05); /* Efecto de aumento ligero */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Alinear category cards */
+.row {
+    display: flex;
+    justify-content: center;
+}
 
 .container {
     max-width: 800px;
@@ -175,7 +202,26 @@ button:hover {
     background-color: #005f73; /* Color de fondo al pasar el mouse */
 }
 
-/* Contenedor principal en Grid */
+/* Contenedor home */
+
+.hero {
+    text-align: center;
+    padding: 150px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+.btn-iniciar {
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Contenedor principal en Grid (eliminar)*/
 .grid-containerhome {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Dos columnas iguales */

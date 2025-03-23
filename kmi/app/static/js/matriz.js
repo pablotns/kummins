@@ -50,6 +50,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                 },
                 body: JSON.stringify({ responses })  // Envía la lista de respuestas
             })
+            // Procesar la respuesta
+            if (response.ok) {
+                const data = await response.json();
+                document.getElementById('result').innerText = `La matriz confusion ${data.matriz}, precision ${data.global}`;
+            } else {
+                const errorData = await response.json();
+                document.getElementById('result').innerText = `Error: ${errorData.message}`;
+            }
 
         } catch (error) {
             console.error('Error al enviar las respuestas:', error);
@@ -57,5 +65,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
+    
     fetchData(); // Llamar a la función después de que el DOM esté listo
 });

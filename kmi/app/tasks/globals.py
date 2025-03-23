@@ -119,4 +119,13 @@ processor = DataProcessor()
 # Ejemplo de uso
 if __name__ == "__main__":
     
-    DataProcessor.get_cantPuntos()
+    processor.process_data()
+    processor.process_kmeans()
+    processor.process_results()
+    c1,c2,c3 = processor.get_cantPuntos()
+    v1,v2,v3 = processor.get_dataTabla()
+
+    print (c1,c2,c3)
+    print ("CATEGORIA A",v1)
+    #print ("CATEGORIA B",v2)
+    #print ("CATEGORIA C",v3)

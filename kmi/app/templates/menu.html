@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú con Iconos</title>
+    <title>Menu</title>
     <!-- Enlace a la biblioteca de iconos Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" type="text/css">
@@ -13,9 +13,9 @@
         <a href="{{ url_for('dash.dashboard') }}"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
         <a href="{{ url_for('settings.ajustes') }}"><i class="fas fa-cog"></i> Ajustes</a>
         <a href="#"><i class="fas fa-chart-line"></i> Informes IA</a>
-        <a href="{{ url_for('dash.cluster01') }}"><i class="fas fa-cubes"></i> Cluster 1</a>
-        <a href="{{ url_for('dash.cluster02') }}"><i class="fas fa-cubes"></i> Cluster 2</a>
-        <a href="{{ url_for('dash.cluster03') }}"><i class="fas fa-cubes"></i> Cluster 3</a>
+        <a href="{{ url_for('dash.cluster01') }}"><i class="fas fa-cubes"></i> Categoria A</a>
+        <a href="{{ url_for('dash.cluster02') }}"><i class="fas fa-cubes"></i> Categoria B</a>
+        <a href="{{ url_for('dash.cluster03') }}"><i class="fas fa-cubes"></i> Categoria C</a>
     </div>
 </body>
 </html>
