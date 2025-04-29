@@ -11,9 +11,9 @@ def datos():
 
     v1, v2, v3 = globals.processor.get_cantPuntos()
     data = [
-            { 'value': v1, 'name': 'CLUSTER1' },
-            { 'value': v2, 'name': 'CLUSTER2' },
-            { 'value': v3, 'name': 'CLUSTER3' }
+            { 'value': v1, 'name': 'CAT1' },
+            { 'value': v2, 'name': 'CAT2' },
+            { 'value': v3, 'name': 'CAT3' }
         ]
     
     chart = {

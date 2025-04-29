@@ -14,7 +14,7 @@
     
         body {
             margin: 0;
-            background: url("{{ url_for('static', filename='img/background.jpg') }}") no-repeat center top;
+            background: url("{{ url_for('static', filename='img/background_final.png') }}") no-repeat center top;
             background-size: cover;
             height: 100vh;
         }
@@ -26,7 +26,23 @@
         .logo {
             width: 100px;
         }
-    
+        
+        h1 {
+            font-size: 48px; /* Letra grande */
+            font-weight: bold;
+            text-align: left; /* Alineado a la izquierda */
+            margin-left: 10%; /* Desde el medio hacia la izquierda */
+            color: #003366; /* Azul oscuro elegante */
+        }
+
+        h2 {
+            font-size: 24px; /* Letra más pequeña */
+            font-weight: normal;
+            text-align: left;
+            margin-left: 10%;
+            color:#6B8688; /* Gris sutil para contraste */
+            max-width: 600px; /* Para que el texto no sea demasiado largo */
+        }
 
     </style>
 </head>
@@ -37,10 +53,12 @@
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Clustering de Datos no etiquetados</h1>
-            <h3>Kummins es una herramienta para la clasificación de computadoras en base a sus componentes hardware</h3>
-            <button class="start-button" onclick="startApp()">Iniciar</button>
+        <section class="hero_container">
+            <h1>Clustering de Datos Sin-Etiquetas</h1>
+            <h2>kummins clasifica computadoras segun su hardware usando k-Means para una gestion eficiente.</h2>
+            <div class="btn-container">
+                <button class="start-button" onclick="startApp()">Iniciar</button>
+            </div>
         </section>
        
     </main>

@@ -104,7 +104,7 @@ ul {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #b9c7c6;;
+    background-color:#FFFFFF;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
@@ -204,14 +204,26 @@ button:hover {
 
 /* Contenedor home */
 
-.hero {
-    text-align: center;
+.hero_container {
+    max-width: 600px;
     padding: 150px 20px;
-    background: rgba(0, 0, 0, 0.5);
+    
     color: white;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    align-items: flex-start; /* Alinea a la izquierda */
+    text-align: left;
 }
+
+.btn-container {
+    width: 100%; /* Ocupar todo el ancho disponible */
+    display: flex;
+    justify-content: center; /* Centrar el botón */
+    margin-top: 20px;
+}
+
 .btn-iniciar {
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 18px;
     background: #007bff;
     color: white;
@@ -239,7 +251,7 @@ button:hover {
 
 /* Estilo para el logo */
 .logo {
-    max-width: 80%; /* Se ajusta al tamaño del contenedor */
+    max-width: 100%; /* Se ajusta al tamaño del contenedor */
     height: auto;
 }
 
@@ -260,7 +272,7 @@ button:hover {
     display: grid;                     /* Activa Grid Layout */
     height: 100vh;                     /* Ocupa toda la altura de la ventana */
     place-items: center;               /* Centra vertical y horizontalmente */
-    background-color: #f0f8ff;         /* Color de fondo suave (opcional) */
+    
 }
 
 /* Caja del formulario de login */
